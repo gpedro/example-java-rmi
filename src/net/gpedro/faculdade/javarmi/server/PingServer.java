@@ -15,18 +15,18 @@ public class PingServer {
 
         // Configurando seguranças para RMI
         System.setSecurityManager(new RMISecurityManager());
-        
+
         try {
             // Criando serviço na porta 1099
             LocateRegistry.createRegistry(1099);
-            
+
             // Criando objeto a ser enviado
             PingPacket packet = new DefaultPingPacket();
-            
+
             // Exportando o objeto
             PingPacket stub = (PingPacket) UnicastRemoteObject.exportObject(
                     packet, 0);
-            
+
             // Declarando o método na /ping
             Naming.rebind("ping", packet);
             System.out.println("Ping server ready");

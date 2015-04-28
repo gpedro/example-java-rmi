@@ -32,4 +32,11 @@ public interface PingPacket extends Remote {
      */
     Date packetData() throws RemoteException;
 
+    /**
+     * Responder pong de acordo com o LocateId
+     * 
+     * @return
+     * @throws RemoteException
+     */
+    String ping(int locate) throws RemoteException;
 }
