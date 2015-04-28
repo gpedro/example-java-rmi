@@ -15,6 +15,7 @@ public interface PingPacket extends Remote {
      * Origem do pacote
      * 
      * @return
+     * @throws RemoteException
      */
     String origin() throws RemoteException;
 
@@ -22,6 +23,7 @@ public interface PingPacket extends Remote {
      * Tamanho do pacote
      * 
      * @return
+     * @throws RemoteException
      */
     int packetSize() throws RemoteException;
 
@@ -29,6 +31,7 @@ public interface PingPacket extends Remote {
      * Data do pacote
      * 
      * @return
+     * @throws RemoteException
      */
     Date packetData() throws RemoteException;
 
